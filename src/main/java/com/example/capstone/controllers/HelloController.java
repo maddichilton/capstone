@@ -1,6 +1,8 @@
 package com.example.capstone.controllers;
 
+import com.example.capstone.models.AssignmentData;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -8,9 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 
     @RequestMapping(value="")
-    @ResponseBody
-    public String index(){
-        return "Hello World";
+    public String index(Model model) {
+        return "index";
     }
 
     @RequestMapping(value="goodbye")
